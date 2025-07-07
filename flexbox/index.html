@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Properties </title>
+    <style>
+        body, html{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container{
+            border: 2px solid black;
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff;
+            min-height: 200px;
+        }
+
+        .items{
+            display: flex;
+        }
+
+        .squares{
+            border: 1px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .color-1{
+            background-color: #ffb3ba;
+        }
+        .color-2{
+            background-color: #baffc9;
+        }
+        .color-3{
+            background-color: #bae1ff;
+        }
+        .color-4{
+            background-color: #ffffba;
+        }
+        .color-5{
+            background-color: #ffdfba;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flex Box Properties</h1>
+    <div class="container">
+        <h2>Property 1: Flex: Row or Row</h2>
+        <div class="items" style="flex-direction: column;">
+            <div class="squares color-1">1</div>
+            <div class="squares color-2">2</div>
+            <div class="squares color-3">3</div>
+            <div class="squares color-4">4</div>
+            <div class="squares color-5">5</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Property 2. Justify Content: Space-Between</h2>
+        <div class="items" style="justify-content: space-between;">
+            <div class="squares color-1">1</div>
+            <div class="squares color-2">2</div>
+            <div class="squares color-3">3</div>
+            <div class="squares color-4">4</div>
+            <div class="squares color-5">5</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Property 3. Align Items: Center</h2>
+        <div class="items" style=" align-items: center; ">
+            <div class="squares color-1">1</div>
+            <div class="squares color-2">2</div>
+            <div class="squares color-3">3</div>
+            <div class="squares color-4">4</div>
+            <div class="squares color-5">5</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Property 4. Align Content: Space-Around (with Wrap)</h2>
+        <div class="items" style="align-content: space-around; flex-wrap: wrap;">
+            <div class="squares color-1">1</div>
+            <div class="squares color-2">2</div>
+            <div class="squares color-3">3</div>
+            <div class="squares color-4">4</div>
+            <div class="squares color-5">6</div>
+            <div class="squares color-1">7</div>
+            <div class="squares color-2">8</div>
+            <div class="squares color-3">9</div>
+            <div class="squares color-4">10</div>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Property 5. Order Property</h2>
+        <div class="items">
+            <div class="squares color-1" style="order: 2;">1</div>
+            <div class="squares color-2" style="order: 1;">2</div>
+            <div class="squares color-3" style="order: 5;">3</div>
+            <div class="squares color-4" style="order: 3;">4</div>
+            <div class="squares color-5" style="order: 4;">5</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Property 6. Flex Grow</h2>
+        <div class="items">
+            <div class="squares color-1" style="flex-grow: 5;">1</div>
+            <div class="squares color-2" style="flex-grow: 1;">2</div>
+            <div class="squares color-3" style="flex-grow: 2;">3</div>
+            <div class="squares color-4" style="flex-grow: 1;">4</div>
+            <div class="squares color-5" style="flex-grow: 1;">5</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Property 7. Align Self</h2>
+        <div class="items">
+            <div class="squares color-1" style="align-self: flex-start;">1</div>
+            <div class="squares color-2" style="align-self: self-end;">2</div>
+            <div class="squares color-3" style="align-self: stretch; height: 400px;">3</div>
+            <div class="squares color-4" style="align-self:first baseline;">4</div>
+            <div class="squares color-5" style="align-self: center;">5</div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+</html>

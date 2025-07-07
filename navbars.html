@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #1a1a1a;
+            color: aliceblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .navBar{
+            margin-bottom: 100px;
+        }
+
+        .nav1 ul{
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            width: 100vw;
+        }
+
+        .nav1 li{
+            list-style: none;
+            display: inline;
+        }
+
+        .nav1 a{
+            text-decoration: none;
+            color: #1a1a1a;
+            cursor: pointer;
+            font-size: 15px;
+             padding: 5px 15px;
+            position: relative;
+        }
+
+
+        .nav1 a::after{
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            background-color: blue;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-out;
+
+        }
+
+        .nav1 a:hover::after{
+            transform: scaleX(1);
+        }
+
+        .nav1 .login {
+        background-color: #254bf6;
+        color: #fff;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+
+      /* Navbar 2 */
+
+      .nav2{
+        padding: 20px;
+        background-color: #7373EC;
+        width: 300px;
+      }
+
+      .nav2 ul{
+        list-style-type: none;
+         margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      .nav2 li{
+        margin-bottom: 12px;
+       
+      }
+
+      .nav2 a{
+        text-decoration: none;
+        color: #ffffff;
+        display: block;
+        padding: 10px;
+        position: relative;
+      }
+
+      .nav2 .login{
+        border: none;
+        padding: 6px;
+        margin-bottom: 10px;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 7px;
+        background-color: #B4DD5E;
+      }
+
+      .nav2 a:hover{
+        background-color: #DBCDB4;
+      }
+
+      .nav2 .login:hover{
+        background-color: #26B6CD;
+      }
+
+      .nav2 a::after{
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        transition: transform 0.5s ease-in-out;
+        background-color: #5F18D9;
+      }
+
+      .nav2 a:hover::after{
+        transform: scaleX(1);
+      }
+
+
+      /* navBar-3 */
+
+      .nav3{
+        margin: 0;
+        padding: 0;
+        background-color: #5F18D9;
+      }
+
+      .nav3 ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px;
+      }
+
+      .nav3 a{
+        color: #ffffff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        position: relative;
+      }
+
+      .nav3 .dropdown-content{
+        display: none;
+        
+      }
+
+      .nav3 .dropdown-menu:hover .dropdown-content{
+        display: block;
+        position: absolute;
+        background-color: #272525;
+        min-width: 100px;
+      }
+
+
+
+      .nav3 .login{
+        border: none;
+        padding: 6px;
+        cursor: pointer;
+        width: 10%;
+        border-radius: 5px;
+        background-color: #B4DD5E;
+      }
+
+      .nav3 a:hover{
+        background-color: #DBCDB4;
+        
+      }
+
+      .nav3 a::after{
+        content: "";
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        height: 2px;
+        background-color: #1a1a1a;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+        width: 100%;
+      }
+
+      .nav3 a:hover::after{
+        transform: scaleX(1);
+      }
+
+      .nav3 .login:hover{
+        background-color: #fff;
+      }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="navBar">
+        <h1>Navbar 1: Navbar with the underline Effect</h1>
+        <nav class="nav1">
+             <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <button class="login">Login</button>
+        </ul>
+        </nav>
+       
+    </div>
+    <div class="navBar">
+        <h1>Navbar 2: Vertical Navbar with the hover Effect</h1>
+        <nav class="nav2">
+             <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <button class="login">Login</button>
+        </ul>
+        </nav>
+       
+    </div>
+    <div class="navBar">
+        <h1>Navbar 3: Navbar with the DropDown Effect</h1>
+        <nav class="nav3">
+             <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown-menu">
+              <a href="#">About</a>
+              <div class="dropdown-content">
+                <a href="#">Contact</a>
+                <a href="#">Team</a>
+                <a href="#">Share</a>
+              </div>
+            </li>
+            <li><a href="#">Products</a></li>
+            <button class="login">Login</button>
+        </ul>
+        </nav>
+       
+    </div>
+</body>
+</html>
